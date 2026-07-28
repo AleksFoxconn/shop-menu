@@ -10,14 +10,16 @@ import './Sidebar.scss';
 
 const CATEGORY_ICONS = [categoryIcon0, categoryIcon1, categoryIcon2, categoryIcon3, categoryIcon4];
 const CATEGORY_ICON_SIZES = [
-  { width: 28, height: 28 },
-  { width: 21, height: 21 },
-  { width: 27.5, height: 34 },
-  { width: 20, height: 26 },
-  { width: 21, height: 21 },
+  { width: 27.88, height: 27.88, gap: 13 },
+  { width: 20.91, height: 20.91, gap: 16.5 },
+  { width: 27.5, height: 34, gap: 10 },
+  { width: 27.1, height: 27.1, gap: 13.5 },
+  { width: 21.13, height: 21.13, gap: 16 },
 ];
 
 const TRANSITION_R = 16;
+const NOTCH_HEIGHT = 66;
+const NOTCH_INSET = 7.25;
 
 function buildNotchPath(width, height, pillLeft, itemTop, itemHeight) {
   const r = TRANSITION_R;
@@ -79,13 +81,14 @@ export default function Sidebar({ activeCategory, onSelectCategory, shopName, sh
       const itemRect = activeEl.getBoundingClientRect();
 
       const scale = width / sidebarRect.width;
+      const itemCenter = (itemRect.top + itemRect.height / 2 - sidebarRect.top) * scale;
 
       return {
         width,
         height,
-        pillLeft: (navRect.left - sidebarRect.left) * scale,
-        itemTop: (itemRect.top - sidebarRect.top) * scale,
-        itemHeight: itemRect.height * scale,
+        pillLeft: (navRect.left - sidebarRect.left) * scale - NOTCH_INSET,
+        itemTop: itemCenter - NOTCH_HEIGHT / 2,
+        itemHeight: NOTCH_HEIGHT,
       };
     };
 
@@ -162,6 +165,7 @@ export default function Sidebar({ activeCategory, onSelectCategory, shopName, sh
               itemRefs.current[cat.id] = el;
             }}
             className={`sidebar__item ${activeCategory === cat.id ? 'is-active' : ''}`}
+            style={{ gap: `${CATEGORY_ICON_SIZES[index].gap}px` }}
             onClick={() => onSelectCategory(cat.id)}
           >
             <span className="sidebar__item-icon">
