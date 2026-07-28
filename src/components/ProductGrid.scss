@@ -1,0 +1,20 @@
+@use '../styles/variables' as *;
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 267.25px);
+  gap: 11px;
+  width: 852.5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 22.5px;
+  padding-bottom: 14px;
+  margin-top: 21px;
+
+  &__empty {
+    margin-top: 40px;
+    text-align: center;
+    color: $text-muted;
+    font-size: 14px;
+  }
+}

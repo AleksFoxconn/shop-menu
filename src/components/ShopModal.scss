@@ -1,0 +1,123 @@
+@use '../styles/variables' as *;
+
+.shop-overlay {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-overlay;
+  overflow: hidden;
+}
+
+.shop-layout {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transform-origin: center center;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 16px;
+  }
+
+  &__theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+  }
+
+  &__esc {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-primary;
+    letter-spacing: 0.03em;
+
+    kbd {
+      font-family: inherit;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 4px 8px;
+      border-radius: 8.25px;
+      font-size: 19.25px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    &-label {
+      font-family: 'DIN Pro Condensed', 'DIN Pro', $font-main;
+      font-size: 24.75px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__row {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    gap: 21.25px;
+    min-height: 0;
+  }
+}
+
+.shop-modal {
+  width: 1228.5px;
+  height: 794.5px;
+  flex-shrink: 0;
+  background: var(--bg-main);
+  border-radius: 25px;
+  padding: 4px;
+  overflow: hidden;
+  display: flex;
+  min-width: 0;
+
+  &__main {
+    width: 897.75px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 34.5px 21.25px 0px 24px;
+  }
+
+  &__toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35.5px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: var(--text-strong);
+  }
+
+  &__total-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 35px;
+    background: var(--count-badge-bg);
+    border-radius: 10.5px;
+    font-size: 20px;
+    color: var(--text-strong);
+  }
+}

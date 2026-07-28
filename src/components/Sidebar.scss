@@ -1,0 +1,139 @@
+@use '../styles/variables' as *;
+
+.sidebar {
+  position: relative;
+  z-index: 0;
+  width: $sidebar-w;
+  flex-shrink: 0;
+  background: var(--sidebar-base-bg);
+  border-radius: 21px;
+  padding: 34.5px 18px 24px 31px;
+  display: flex;
+  flex-direction: column;
+
+  &__highlight {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: var(--bg-main);
+    pointer-events: none;
+  }
+
+  &__panel-mask {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--bg-surface);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    pointer-events: none;
+    border-radius: 21px;
+  }
+
+  &__shop-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__shop-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-heading);
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 57.8px;
+    height: 57.8px;
+    background: #5c7aad;
+    border-radius: 50%;
+    box-shadow: 0 0 2.85px rgba(92, 122, 173, 0.52);
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    font-size: 15px;
+    color: $text-secondary;
+
+    svg {
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+  }
+
+  &__label {
+    margin: 57.75px 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: $text-secondary;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 20.5px;
+    margin-right: -18px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 66px;
+    padding: 0 14px 0 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: $text-secondary;
+    text-align: left;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    img {
+      opacity: 0.5;
+      flex-shrink: 0;
+      filter: invert(var(--icon-invert));
+      transition: opacity 0.15s ease;
+    }
+
+    &:hover {
+      background: $surface-hover;
+      color: var(--text-heading);
+    }
+
+    &.is-active {
+      color: var(--text-heading);
+
+      .sidebar__item-icon img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+}

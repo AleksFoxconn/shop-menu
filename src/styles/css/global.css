@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_lightitalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_mediumitalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_bolditalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro";
+  src: url("../assets/fonts/DINPro/dinpro_blackitalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedlight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedlightitalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedregular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condenseditalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedmedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedmediumitalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedbold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedbolditalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedblack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("../assets/fonts/DINPro/dinpro_condensedblackitalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+:root,
+:root[data-theme=dark] {
+  --bg-main: #14181f;
+  --bg-surface: #1b1f28;
+  --sidebar-base-bg: #171a24;
+  --bg-surface-active: #272d38;
+  --bg-footer: rgba(43, 50, 61, 1);
+  --bg-footer-active: rgba(51, 58, 70, 1);
+  --text-heading: #ffffff;
+  --text-strong: #ffffff;
+  --text-faint: rgba(255, 255, 255, 0.4);
+  --search-gradient-start: rgba(43, 50, 61, 1);
+  --search-gradient-end: rgba(43, 50, 61, 0);
+  --search-text: #ffffff;
+  --clear-btn-bg: rgba(255, 255, 255, 0.03);
+  --count-badge-bg: rgba(255, 255, 255, 0.08);
+  --btn-outline: rgba(255, 255, 255, 0.5);
+  --btn-outline-hover: #ffffff;
+  --btn-hover-bg: rgba(255, 255, 255, 0.11);
+  --divider-color: #a3a3a3;
+  --remove-btn-bg: #474c52;
+  --pay-icon-bg: #739423;
+  --qty-border: rgba(190, 193, 196, 1);
+  --qty-text: #ffffff;
+  --icon-invert: 0;
+  --scrollbar-track: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 1);
+}
+
+:root[data-theme=light] {
+  --bg-main: #dee1e6;
+  --bg-surface: #e9ebee;
+  --sidebar-base-bg: transparent;
+  --bg-surface-active: #d7d9db;
+  --bg-footer: rgba(250, 250, 250, 1);
+  --bg-footer-active: rgba(202, 207, 212, 1);
+  --text-heading: #14181f;
+  --text-strong: #020202;
+  --text-faint: #a4a7ab;
+  --search-gradient-start: rgba(92, 122, 173, 1);
+  --search-gradient-end: rgba(37, 73, 133, 0);
+  --search-text: #ffffff;
+  --clear-btn-bg: #e9ebee;
+  --count-badge-bg: #e9ebee;
+  --btn-outline: rgba(23, 23, 23, 0.5);
+  --btn-outline-hover: #171717;
+  --btn-hover-bg: rgba(23, 23, 23, 0.11);
+  --divider-color: #bec1c4;
+  --remove-btn-bg: #5c7aad;
+  --pay-icon-bg: #739423;
+  --qty-border: rgba(190, 193, 196, 1);
+  --qty-text: #2b2b2b;
+  --scrollbar-track: #868686;
+  --scrollbar-thumb: #787878;
+  --scrollbar-thumb-hover: #787878;
+  --icon-invert: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "DIN Pro", "Inter", "Segoe UI", system-ui, sans-serif;
+  color: #f4f5f7;
+  background: #0b0c10;
+  transform: blur(10px);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 14px;
+}
+
+.shop-closed {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-closed button {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.shop-closed button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}

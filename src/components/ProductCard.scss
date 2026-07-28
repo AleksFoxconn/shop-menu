@@ -1,0 +1,116 @@
+@use '../styles/variables' as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border-radius: $radius-md;
+  padding: 0 16px 0 16px;
+  width: 267.25px;
+  height: 219.5px;
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+
+  &.is-in-cart {
+    background-color: var(--bg-surface-active);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 64.5px;
+    height: 80.5px;
+    flex-shrink: 0;
+    color: var(--text-heading);
+    margin-bottom: 7.5px;
+  }
+
+  &__name {
+    font-size: 15px;
+    margin: 0 0 3.5px;
+    text-align: left;
+    color: var(--text-strong);
+  }
+
+  &__desc {
+    font-size: 11px;
+    line-height: 13.61px;
+    height: 43.5px;
+    color: var(--text-faint);
+    margin: 0 0 10px;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0 -16px 0;
+    padding: 10px 10px 10.5px 9.5px;
+    background: var(--bg-footer);
+    border-radius: $radius-md;
+    height: 51.5px;
+  }
+
+  &.is-in-cart &__footer {
+    background: var(--bg-footer-active);
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-strong);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 125.5px;
+    height: 32.5px;
+    font-size: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.27px;
+    padding: 0 11.7px;
+    border-radius: 11.31px;
+    background: none;
+    border: 0.75px solid var(--btn-outline);
+    color: var(--btn-outline);
+    white-space: nowrap;
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+
+    img {
+      width: 22px;
+      height: 22px;
+      opacity: 0.5;
+      filter: invert(var(--icon-invert));
+      transition: opacity 0.15s ease;
+    }
+
+    &:hover {
+      background: var(--btn-hover-bg);
+      border-color: var(--btn-outline-hover);
+      color: var(--btn-outline-hover);
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    &.is-primary {
+      background: #5C7AAD;
+      border-color: #5C7AAD;
+      color: #fff;
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
