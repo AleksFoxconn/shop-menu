@@ -41,18 +41,24 @@
   &__esc {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 18.5px;
     align-self: flex-start;
-    margin-left: -22.75px;
+    height: 33px;
+    padding: 0;
+    margin-left: 3.75px;
     font-size: 24px;
     font-weight: 600;
     color: $text-primary;
     letter-spacing: 0.03em;
 
     kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 49.5px;
+      height: 33px;
       font-family: inherit;
       background: rgba(255, 255, 255, 0.2);
-      padding: 4px 8px;
       border-radius: 8.25px;
       font-size: 19.25px;
       font-weight: 700;

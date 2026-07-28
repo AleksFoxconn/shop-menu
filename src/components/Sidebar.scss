@@ -7,7 +7,7 @@
   flex-shrink: 0;
   background: var(--sidebar-base-bg);
   border-radius: 21px;
-  padding: 34.5px 18px 24px 31px;
+  padding: 34.5px 13.25px 24px 31px;
   display: flex;
   flex-direction: column;
 
@@ -89,7 +89,7 @@
     flex-direction: column;
     gap: 0;
     margin-top: 13.18px;
-    margin-right: -18px;
+    margin-right: -13.25px;
   }
 
   &__item {
