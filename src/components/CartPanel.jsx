@@ -102,7 +102,7 @@ export default function CartPanel({ productsById }) {
             className={`balance-chip balance-chip--cash ${paymentMethod === 'cash' ? 'is-selected' : ''}`}
             onClick={() => setPaymentMethod('cash')}
           >
-            <img src={moneyIconUrl} alt="" width={18} height={18} />
+            <span className="balance-chip__icon" style={{ '--chip-icon': `url(${moneyIconUrl})` }} />
             {formatMoney(cash)}
           </button>
           <button
@@ -111,7 +111,7 @@ export default function CartPanel({ productsById }) {
             className={`balance-chip balance-chip--bank ${paymentMethod === 'bank' ? 'is-selected' : ''}`}
             onClick={() => setPaymentMethod('bank')}
           >
-            <img src={cardIconUrl} alt="" width={18} height={18} />
+            <span className="balance-chip__icon" style={{ '--chip-icon': `url(${cardIconUrl})` }} />
             {formatMoney(bank)}
           </button>
         </div>
